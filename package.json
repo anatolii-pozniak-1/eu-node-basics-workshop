@@ -1,0 +1,10 @@
+{
+  "name": "manual-http-router-workshopper",
+  "version": "0.1.0",
+  "description": "Learn Node.js: Manual HTTP Router practice (workshopper-style)",
+  "bin": {
+    "manual-http-router": "bin/cli.js"
+  },
+  "license": "MIT",
+  "private": true
+}
