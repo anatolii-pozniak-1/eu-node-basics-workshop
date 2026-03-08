@@ -2,15 +2,27 @@
 
 A learnyounode-style interactive workshop for Node.js backend fundamentals.
 
-## Install
+## Install for Students
 
+Run directly without global install:
+
+```bash
+npx eu-node-basics-workshop
 ```
+
+Or install globally:
+
+```bash
+npm i -g eu-node-basics-workshop
+eu-node-basics
+```
+
+## Install from Source
+
+If you cloned this repository:
+
+```bash
 npm install
-```
-
-Then start the interactive menu:
-
-```
 npm start
 ```
 
@@ -42,3 +54,4 @@ eu-node-basics help                               # command help
 - Uses `inquirer` for the interactive terminal menu.
 - Progress is stored in `.progress.json`.
 - CLI is interactive-only (no separate `list/select/verify` command mode).
+- Progress is local to the current working directory. Running in a new folder starts fresh progress.
