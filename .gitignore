@@ -1,0 +1,12 @@
+node_modules/
+solutions/
+.progress.json
+.DS_Store
+*.tgz
+*.zip
+data.json
+data.valid.json
+data.invalid.json
+data.before.json
+request.body.json
+upload.txt

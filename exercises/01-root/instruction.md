@@ -1,30 +1,33 @@
-# 01 - ROOT ROUTE
+# 01 - 4.1 ROOT ROUTE
 
-Implement a minimal HTTP server with a **single route**.
+Write a program that creates a minimal HTTP server with one route.
 
-## Requirements
-- Use Node's `http` module.
-- Listen on the port provided as the first command-line argument.
-- Handle **GET /**:
-  - Status: `200`
-  - Body: plain text `Welcome to Manual HTTP Router`
+## REQUIREMENTS
 
-Other routes can respond anything (they are not tested yet).
+Your program must:
 
-## Run
+* Use Node's built-in `http` module
+* Listen on the port provided as the first command-line argument
+* Handle the route `GET /`
+
+When a client requests `GET /`, your server must:
+
+* Respond with status code 200
+* Set the header `Content-Type: text/plain`
+* Send the response body:
+
 ```
+Welcome to Manual HTTP Router
+```
+
+Other routes are not tested in this exercise.
+
+## Debug
+1. Run your solution manually:
+```bash
 node solution.js 3000
 ```
-
-## Verify
-```
-manual-http-router verify 1 solution.js
-```
-
-## Reminder
-After completing this step, run:
-
-```
-manual-http-router verify 1 solution.js
-manual-http-router list
-```
+2. Open the matching `verify.js` for this exercise and inspect the exact requests/checks it performs.
+3. Reproduce those requests manually with `curl` or your browser.
+4. Add temporary `console.log(...)` statements if you need to inspect route, method, request body, or response data.
+5. After local checks, run `eu-node-basics verify ...` again.

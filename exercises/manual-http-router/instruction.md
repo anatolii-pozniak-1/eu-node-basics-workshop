@@ -25,11 +25,11 @@ Your program must:
   - Status: `200`
   - Body: plain text with the exact value of `msg` (empty string if missing)
 
-- `POST /sum`
+- `GET /sum?a=2&b=5`
   - Status: `200`
   - Body: JSON `{ "sum": <number> }`
-  - Request body is JSON: `{ "a": number, "b": number }`
-  - If JSON is invalid or numbers are missing/invalid, return status `400` and JSON `{ "error": "Invalid numbers" }`
+  - Read `a` and `b` from query parameters
+  - If numbers are missing/invalid, return status `400` and JSON `{ "error": "Invalid numbers" }`
 
 - Any other path or method
   - Status: `404`
@@ -53,10 +53,11 @@ Then try:
 curl http://localhost:3000/
 curl http://localhost:3000/time
 curl "http://localhost:3000/echo?msg=hello"
+curl "http://localhost:3000/sum?a=2&b=5"
 ```
 
 When you're ready:
 
 ```
-manual-http-router verify solution.js
+eu-node-basics verify solution.js
 ```

@@ -1,10 +1,41 @@
 {
-  "name": "manual-http-router-workshopper",
-  "version": "0.1.0",
+  "name": "eu-node-basics-workshop",
+  "version": "1.0.0",
   "description": "Learn Node.js: Manual HTTP Router practice (workshopper-style)",
-  "bin": {
-    "manual-http-router": "bin/cli.js"
-  },
+  "private": false,
   "license": "MIT",
-  "private": true
+  "author": "",
+  "keywords": [
+    "nodejs",
+    "workshopper",
+    "education",
+    "backend",
+    "http"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anatolii-pozniak-1/eu-node-basics-workshop.git"
+  },
+  "homepage": "https://github.com/anatolii-pozniak-1/eu-node-basics-workshop#readme",
+  "bugs": {
+    "url": "https://github.com/anatolii-pozniak-1/eu-node-basics-workshop/issues"
+  },
+  "files": [
+    "bin",
+    "exercises",
+    "README.md",
+    "README.practice6-streams.md"
+  ],
+  "scripts": {
+    "start": "node bin/cli.js",
+    "workshop": "node bin/cli.js"
+  },
+  "bin": {
+    "eu-node-basics": "bin/cli.js"
+  },
+  "dependencies": {
+    "inquirer": "^13.2.2",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0"
+  }
 }

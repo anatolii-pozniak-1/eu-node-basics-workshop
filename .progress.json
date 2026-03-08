@@ -1,5 +1,20 @@
 {
   "completed": {
-    "01-root": true
+    "01-root": true,
+    "02-time": true,
+    "03-echo": true,
+    "04-sum": true,
+    "05-404": true,
+    "11-stream-response": true,
+    "12-stream-upload": true,
+    "13-stream-transform": true,
+    "14-stream-counter": true,
+    "15-stream-errors": true,
+    "16-file-read": true,
+    "17-file-write": true,
+    "18-file-update": true,
+    "19-file-delete": true,
+    "21-sequential": true,
+    "25-threadpool-limit": true
   }
 }

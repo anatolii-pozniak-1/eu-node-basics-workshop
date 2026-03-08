@@ -86,41 +86,37 @@ module.exports = async function verify(solutionPath) {
     assert(echo.status === 200, "GET /echo should return 200");
     assert(echo.body === "hello", "GET /echo should return msg text");
 
-    // POST /sum valid
+    // GET /sum valid
     const sum = await request({
-      method: "POST",
+      method: "GET",
       port,
-      path: "/sum",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ a: 2, b: 5 }),
+      path: "/sum?a=2&b=5",
     });
-    assert(sum.status === 200, "POST /sum should return 200");
+    assert(sum.status === 200, "GET /sum should return 200");
     let sumJson;
     try {
       sumJson = JSON.parse(sum.body);
     } catch {
-      throw new Error("POST /sum should return valid JSON");
+      throw new Error("GET /sum should return valid JSON");
     }
-    assert(sumJson.sum === 7, "POST /sum should return correct sum");
+    assert(sumJson.sum === 7, "GET /sum should return correct sum");
 
-    // POST /sum invalid JSON
+    // GET /sum invalid query
     const bad = await request({
-      method: "POST",
+      method: "GET",
       port,
-      path: "/sum",
-      headers: { "Content-Type": "application/json" },
-      body: "{bad json",
+      path: "/sum?a=2",
     });
-    assert(bad.status === 400, "POST /sum invalid JSON should return 400");
+    assert(bad.status === 400, "GET /sum invalid query should return 400");
     let badJson;
     try {
       badJson = JSON.parse(bad.body);
     } catch {
-      throw new Error("POST /sum error should be JSON");
+      throw new Error("GET /sum error should be JSON");
     }
     assert(
       badJson.error === "Invalid numbers",
-      "POST /sum invalid JSON should return error message"
+      "GET /sum invalid query should return error message"
     );
 
     // 404

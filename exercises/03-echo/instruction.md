@@ -1,4 +1,4 @@
-# 03 - ECHO ROUTE
+# 03 - 4.3 ECHO ROUTE
 
 Add a query-string echo endpoint.
 
@@ -12,13 +12,24 @@ Add a query-string echo endpoint.
 
 ## Verify
 ```
-manual-http-router verify 3 solution.js
+eu-node-basics verify 3 echo_route.js
 ```
+
+## Debug
+1. Run your solution manually:
+```bash
+node echo_route.js 3000
+```
+2. Open the matching `verify.js` for this exercise and inspect the exact requests/checks it performs.
+3. Reproduce those requests manually with `curl` or your browser.
+4. Add temporary `console.log(...)` statements if you need to inspect route, method, request body, or response data.
+5. After local checks, run `eu-node-basics verify ...` again.
 
 ## Reminder
-After completing this step, run:
+After completing this step:
 
 ```
-manual-http-router verify 3 solution.js
-manual-http-router list
+eu-node-basics
 ```
+
+Then choose this exercise and select `Verify`.
